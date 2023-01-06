@@ -81,6 +81,7 @@ const ReactCalendar = () => {
       //Array of all dates that a roomType is reserved for
       let blockedDates = [];
       console.log(roomType)
+      console.log(rooms)
       //Finds out the Room Count of chosen room type and pushes to array
         for (let r = 0; r < rooms.length; r++) {
         const roomMatched = (rooms[r].roomType);
