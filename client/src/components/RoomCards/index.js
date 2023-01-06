@@ -37,8 +37,10 @@ const RoomCards = (props) => {
 
     let cards = [];
     const renderCards = () => {
+        if (props.isValid===true){
     const openRooms = roomDummyData.find(rooms => rooms.name === props.roomType)
-    for (let i = 0; i < props.roomNumber[0]; i++){
+    for (let i = 0; i < props.roomNumber[0]; i++)
+        {
         cards.push( <Stack key={i} gap={1} className="col-md-5">
         <Container>
             <Row key={openRooms.id}>
@@ -47,22 +49,46 @@ const RoomCards = (props) => {
                         <img className="card-img-top" src={openRooms.img} alt="Superior Double hotel room" />
                         <div className="card-body">
                         <h5 className="card-title">{openRooms.name} Room</h5>
+                        <div className="card-main">
                         <ul>
                             <li>Room Description:</li>
                             <li>Bed Type: {openRooms.bed}</li>
                             <li>Room View: {openRooms.view}</li>
                             <li>Room Price:{openRooms.price}.</li>
                         </ul>
-                        </div>
                         <Button id="roomBtn" size="lg" variant="outline-warning">Select Room</Button>{' '}
+                        </div>
+                        </div>
                     </Row>
                 </Row>
             </Row>
         </Container>
         </Stack>)
-    }
+        }
+    } 
+    // else if (props.isValid === false) {
+    //     cards.push(
+    //     <Stack key={1} className="col-md-5">
+    //     <Container>
+    //         <Col>
+    //             <Col md="auto">
+    //                 <Col className="card">
+    //                 <h5 className="card-title">We apologize for the inconvenience.</h5>
+    //                     <div className="card-body">
+    //                         <p>{props.noVacancy}</p>
+    //                     <div className="card-main">
+    //                     </div>
+    //                     </div>
+    //                 </Col>
+    //             </Col>
+    //         </Col>
+    //     </Container>
+    //     </Stack>)
+    //     console.log("test")
+    // }
 }
-if(props.isValid === true ) {renderCards()} 
+renderCards()
+ 
 
     return (
         <div>

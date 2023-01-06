@@ -19,10 +19,11 @@ import RoomCards from "../RoomCards";
 const ReactCalendar = () => {
 
 
-    const reservationArr = [];  //Holds all know reservations
+    const reservationArr = [];  //Holds all known reservations
     const daysReq = [];  //The dates requesting to be reserved
     const roomCount = [];  //The amount of rooms the hotel has for specific roomType
     const noVancancy = [];  // Dates where there is no Vacancy
+    const sortRoomArr = [];
     const navigate = useNavigate();
     
 
@@ -80,8 +81,6 @@ const ReactCalendar = () => {
       let matchingRes = [];
       //Array of all dates that a roomType is reserved for
       let blockedDates = [];
-      console.log(roomType)
-      console.log(rooms)
       //Finds out the Room Count of chosen room type and pushes to array
         for (let r = 0; r < rooms.length; r++) {
         const roomMatched = (rooms[r].roomType);
@@ -90,7 +89,6 @@ const ReactCalendar = () => {
           //Reset roomCount Array, allows referenced room Count to vary based on room type 
           roomCount.length = 0;
           roomCount.push(roomNum)
-          console.log(roomCount)
         }}
   
       //Find all reservations that contain the resquested room type and put the matches in new array
@@ -124,18 +122,24 @@ const ReactCalendar = () => {
          for (let i = 0; i < (Object.entries(count)).length; i++) {
           //dateRoomsArr will return the Date, dateRoomsArr[1] will return number of booked rooms for that date
           const dateRoomsArr = (Object.entries(count));
+          // Take dates, roomcount and sort into JSON obj
+          let sortedDateRoom = dateRoomsArr.map((a)=>{return {"date": a[0], "count":a[1]}}).sort(function(a, b){return a.count - b.count});
+          let x = roomCount - sortedDateRoom[i].count;
           //If there are more reservations for that day than there are rooms. The reservation cannot be made
-          if( dateRoomsArr[i][1] >= 5){
-            console.log("There are no",roomType,'rooms Left on ', dateRoomsArr[i][0])
-            noVancancy.push(dateRoomsArr[i][0])
+          if( sortedDateRoom[i].count >= roomCount){
+            console.log("There are",x,roomType,'rooms Left on ', sortedDateRoom[i].date)
+            noVancancy.push(sortedDateRoom[i].date)
             setIsValid(false)
-          } else if (dateRoomsArr.length <= i+1 && noVancancy < 1){
+          } if ( sortedDateRoom[i].count > 0){
+            console.log("There are",x,roomType,"rooms left on", sortedDateRoom[i].date )
+          }
+          else if (sortedDateRoom.length <= i+1 && noVancancy < 1){
             console.log("Room is available")
             setIsValid(true)
           }
          }
          setDisabledDates(noVancancy);
-         console.log(noVancancy)
+         console.log("There is No Vancancy for",roomType, "on the following dates",noVancancy)
         };
 
          //Trigger to Check if Room is open
@@ -144,7 +148,6 @@ const ReactCalendar = () => {
       setDisabledDates('');
       checkAvailable();
       setRoomNumber(roomCount)
-      console.log(roomNumber) 
     }
 
     //add Reservation
@@ -213,7 +216,8 @@ const ReactCalendar = () => {
           <RoomCards
           roomNumber={roomNumber}
           roomType={roomType}
-          isValid={isValid}/>
+          isValid={isValid}
+          noVancancy={noVancancy}/>
         </group>  
       </section>
       <section>

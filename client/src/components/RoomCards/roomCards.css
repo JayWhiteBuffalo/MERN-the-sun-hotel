@@ -7,16 +7,28 @@
 .card img{
     width: 20vw;
 }
+
+.card-body{
+    max-width: 32vw;
+}
+.card-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 #roomBtn{
     display: flex;
     position: relative;
-    left: 20%;
+    justify-content: center;
     width: 10vw;
-    text-align: center;
+    max-height: 75px;
+    margin: 1rem;
 }
 .card h5{
     position: relative;
     font-weight: 700;
     left: 8vw;
     margin-bottom: 1rem;
+    max-width: 15vw;
 }
