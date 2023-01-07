@@ -1,7 +1,6 @@
 import { React, useRef, useState, useEffect } from "react";
 import Auth from "../../utils/auth"
 import { Link } from "react-router-dom";
-import DropDown from "../DropDown";
 import MainHead from "../MainHeader/mainHead";
 
 const Header = () =>{

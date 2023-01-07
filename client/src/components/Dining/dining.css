@@ -1,0 +1,131 @@
+.dine-wrap{
+    display: flex;
+    background-color: var(--darker);
+    position: relative;
+    top: -3vh;
+    height: fit-content;
+}
+.dine-left-text{
+    background-color: var(--darker);
+    width: 32vw;
+    position: relative;
+    top:-5vh;
+}
+.dine-left-text h1{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 0rem 2rem 7rem 2rem;
+    max-width: 50vw;
+    font-size: 8vw;
+    letter-spacing: 2rem;
+}
+.drink{
+    margin-top: 1.5rem;
+    font-size: 7vw;
+    color: var(--secondary);
+}
+.drink:hover{
+    color: var(--primary);
+}
+.dine-right{
+    position: relative;
+    justify-content: center;
+    right: -5%
+}
+
+.dine-head1{
+  display: flex;
+  position: relative;
+  height: 15vh;
+  width: 50vw;
+  top: 3%;
+  justify-content: flex-end;
+  /* background-color: var(--secondary); */
+}
+.dine-head2{
+    display: flex;
+    position: relative;
+    margin: 1rem;
+    height: 15vh;
+    width: 50vw;
+    margin-top: 30vh;
+    justify-content: flex-start;
+    /* background-color: var(--secondary); */
+  }
+  .dine-head3{
+    display: flex;
+    position: relative;
+    margin: 1rem;
+    height: 20vh;
+    width: 55vw;
+    margin-top: 25vh;
+    justify-content: flex-end;
+    /* background-color: var(--secondary); */
+  }
+
+.dine-head h4{
+    display: flex;
+    flex: 1;
+}
+.img1{
+    height: 33vh;
+    width: 20vw;
+}
+.img2{
+    height: 20vh;
+    width: 20vw;
+}
+.img3{
+    height: 20vh;
+    width: 20vw;
+}
+
+.img1{
+    --g: 4px;     /* the gap */
+    --b: 5px;    /* border thickness*/
+    --c: var(--secondary); /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(20%);
+    transition: .3s;
+  }
+  .img1:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+    --c: var(--primary);
+  }
+  .dine-left-text h2{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: -1rem 0rem 2rem 2rem;
+    max-width: 50vw;
+    font-size: 8vw;
+    letter-spacing: 1.5rem;
+    color: #198754;
+}
+.dine-left-text h2:hover{
+    color: var(--primary);
+    opacity: .8;
+}
+
+  .diningBook{
+    position: relative;
+    background-color: var(--dark);
+    opacity: .8;
+    padding: 4%;
+    width: 30vw;
+    min-width: 270px;
+    border-radius: 10%;
+    margin-left: 1rem;
+  }
