@@ -4,6 +4,7 @@ cont{
   position: relative;
   display: flex;
   flex: 1;
+  
 }
 .bookingMain{
     max-width: 100vw;
