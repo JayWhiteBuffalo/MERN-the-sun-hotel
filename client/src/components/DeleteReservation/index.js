@@ -3,39 +3,30 @@ import { useMutation } from '@apollo/client';
 import { DELETE_RESERVATION } from '../../utils/mutations';
  
 function DeleteReservation(props) {
-  const [formState, setFormState] = useState();
   const [delReservation, { error }] = useMutation(DELETE_RESERVATION);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     await delReservation({
       variables: { 
-        id: formState._id 
+        id: props.value
       } 
     });
     window.location.reload();
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-    console.log(value)
   };
 
   return (
   <div>
     <h3>Delete a Reservation</h3>
     <form onSubmit={handleFormSubmit}>
+      <br/>
       <div>
         <label htmlFor='reservation'>Enter booking ID</label>
         <input 
           name='_id'
           type='text'
           id='_id'
-          onChange={handleChange}
+          value={props.value}
         />
       </div>
       {error ? (
@@ -44,6 +35,7 @@ function DeleteReservation(props) {
           </div>
         ) : null}
       <div>
+        <br/>
         <button className="delete-btn" type="submit">Delete</button>
       </div>
     </form>

@@ -15,11 +15,13 @@ const Review = () => {
   console.log(reviews);
 
   return (
-      <main className="review-page top">
-        <Header/>
+    <div>
+    <Header/>
+      <div className="review-page">
         <h1>Leave a review today!</h1>
+        <div className="review-flex">
           { reviews ? (
-             <div>
+             <div className="review-wrap">
               {reviews.map((review) => (
                 <div className="review-container"key={review._id}>
                   <p className="review-date">{review.createdAt}</p>
@@ -27,11 +29,13 @@ const Review = () => {
                 </div>
               ))}
             </div>
+          
 
            ) : null}
 
-             
-      </main>
+      </div>   
+      </div>
+      </div>
   );
 };
 

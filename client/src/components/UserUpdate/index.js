@@ -26,7 +26,7 @@ function UpdateEmail(props) {
   };
 
   return (
-  <div>
+  <div className='profile-email'>
     <h2>Change your Email</h2>
     <form onSubmit={handleFormSubmit}>
       <div>
@@ -44,6 +44,7 @@ function UpdateEmail(props) {
             <p>Something went wrong</p>
           </div>
         ) : null}
+        <br/>
       <div>
         <button className='submit-btn' type="submit">Submit</button>
       </div>

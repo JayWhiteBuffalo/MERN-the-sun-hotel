@@ -31,9 +31,9 @@ function AddReview() {
   return (
     <div className='review-component'>
       <h2>Write a Review</h2>
+      <br/>
       <form id="review-form" onSubmit={handleFormSubmit}>
         <div className='reviewText'>
-          <label htmlFor="reviewText">Review:</label>
           <textarea 
             type="text" 
             name="reviewText"
@@ -49,6 +49,7 @@ function AddReview() {
           </div>
         ) : null}
         <div>
+          <br/>
           <button className='submit-btn' type="submit">Submit</button>
         </div>
       </form>

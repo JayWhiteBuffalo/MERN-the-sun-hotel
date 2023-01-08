@@ -1,3 +1,8 @@
+.top{
+  background-color: var(--darker);
+  position: relative;
+  margin-top: 10vh;
+}
 .dine-wrap{
     display: flex;
     background-color: var(--darker);
@@ -129,4 +134,5 @@
     min-width: 270px;
     border-radius: 10%;
     margin-left: 1rem;
+    margin-top: 5rem;
   }

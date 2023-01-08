@@ -5,6 +5,7 @@ cont{
   display: flex;
   flex: 1;
   
+  
 }
 .bookingMain{
     max-width: 100vw;
@@ -33,6 +34,7 @@ group{
   width: 57vw;
   height: fit-content;
   min-height: 60vh;
+  background-color: var(--darker);
 }
 
 .resTop{

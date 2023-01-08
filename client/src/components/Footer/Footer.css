@@ -1,12 +1,11 @@
 footer
 {
-    background-color: var(--light);
+    background-color: var(--darker);
     padding: 1em;
-    color: var(--white);
+    color: var(--primary);
     /* display: flex; */
     flex-direction: row;
     justify-content: center;
-    margin-top: 5rem;
     position: relative;
 
 

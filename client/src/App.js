@@ -17,7 +17,7 @@ import Room from "./pages/Room";
 import Error from "./pages/Error";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import MyProfile from "./pages/MyProfile";
+import MyProfile from "./pages/MyProfile.js";
 import Review from "./pages/Review";
 
 const httpLink = createHttpLink({
@@ -38,6 +38,7 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+
 
 function App() {
 

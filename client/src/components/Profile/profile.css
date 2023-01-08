@@ -1,0 +1,219 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+/*My Profile*/
+.my-profile{
+    background-color: var(--primaryLight);
+    margin-top: -3vh;
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    padding: 0px;
+    display: flexbox;
+}
+  
+  .welcome {
+    border-bottom: 25px solid rgba(255,255,255, 0.75);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flex-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .pal-wrap{
+    display:flex;
+    position: relative;
+    margin: 2rem 0rem 2rem 0rem;
+    width: fit-content;
+    flex: 1;
+    left: 78%;
+  
+  }
+
+  .pal-cont{
+    position: relative;
+    background-color: var(--secondary);
+    width: 20vw;
+    height: fit-content;
+    border-radius: 15%;
+    background-color: var(--dark);
+    opacity: .9;
+  }
+  .profileBook{
+    /* position: relative; */
+    /* display: flex; */
+    background-color: var(--darker);
+    opacity: .8;
+    padding: 5%;
+    width: 30vw;
+    min-width: 270px;
+    max-width:fit-content;
+    border-radius: 10%;
+    margin: 5% 33% 0 0%;
+    justify-content: flex-start;
+    height: fit-content;
+    flex: 1;
+    
+  }
+  
+  .my-profile span {
+    color: rgba(255,255,255, 0.75);
+  }
+  
+  .profile-link {
+    font-size: 25px;
+    background-color: rgba(254, 110, 0, 0.784);
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  /* .components {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    border: 3px solid black;
+    padding: 0;
+  } */
+  
+  .components button {
+    color: var(--darker);
+    /* background-color: var(--tertiary); */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  
+  .components textarea {
+    border: 1px solid var(--darker);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.471);
+  
+  }
+  
+  .components textarea:focus {
+    background-color: rgba(255, 255, 255, 0.804);
+  }
+  
+  .components input {
+    border: 1px solid var(--darker);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.542);
+  }
+  
+  .components input:focus {
+    background-color: rgba(255, 255, 255, 0.899);
+  }
+
+  .reservation-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 8vh 0vh 0vh 0vh;
+    width: 50vw;
+    flex: 1;
+    right: 30%;
+    border-radius: 10%;
+
+  }
+  .reservation-wrap h2{
+    margin-top: 2rem;
+  }
+
+  
+  .reservation-component {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    row-gap: 15px;
+    width: 45vw;
+    justify-content: center;
+    padding: .5rem;
+    margin: 2rem;
+  }
+  
+  .user-reservations {
+    border: 1px solid var(--secondary);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.471);
+    width: 20vw;
+    margin: .5rem;
+  }
+  .reservation-component button {
+    background: white;
+    font-weight: 800;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  .reservation-component button:hover {
+    background-color: var(--secondary);
+    filter: drop-shadow(0 0 1.5rem var(--primaryLight));
+    opacity: .8;
+    scale:calc(1.05);
+  }
+
+  .profile-email{
+    border: 1px solid black;
+    width: 35vw;
+    height: 40vh;
+    display: flex;
+    position: relative;
+    /* top: 15vh;
+    right: 60vh; */
+    margin: 10vh 35vw 0vh 0vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10%;
+  }
+  .profile-email h2{
+    position: relative;
+    top: -15%;
+  }
+
+  .review-component{
+    border: 1px solid black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    min-width: 20rem;
+    max-width: 40vw;
+    min-height: 400px;
+    max-height: 40vh;
+    margin: 8vh 40vw 0 0 ;
+    text-align: center;
+    border-radius: 10%;
+  }
+  .reviewText textarea{
+    width: 80%;
+  }

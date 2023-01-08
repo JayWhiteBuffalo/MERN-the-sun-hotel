@@ -1,47 +1,25 @@
 //Import dependencies
 import React from 'react';
-import { Link } from 'react-router-dom';
-import UserUpdate from '../components/UserUpdate';
-import MyReservations from '../components/MyReservations';
-import CreateReview from '../components/CreateReview';
+// import { Link } from 'react-router-dom';
+// import UserUpdate from '../components/UserUpdate';
+// import MyReservations from '../components/MyReservations';
+// import CreateReview from '../components/CreateReview';
 import Header from '../components/Header/Header';
+// import BookNowBox from '../components/BookNowBox';
+import Profile from "../components/Profile";
+// import "../components/BookNowBox/bnb.css"
 
-import { useQuery } from '@apollo/client';
-import { QUERY_ME } from '../utils/queries';
+// import { useQuery } from '@apollo/client';
+// import { QUERY_ME } from '../utils/queries';
 
 
-function MyProfile () {
-  const { data } = useQuery(QUERY_ME);
-  let me;
 
-  if (data) {
-    me = data.me;
-  }
-
+function MyProfile (props) {
   return (
-    <main className='my-profile'>
-      <Header/>
-        {me ? (
-          <div>
-            <div className='welcome'>
-              <h1>Welcome back <span>{me.username}</span> !</h1>
-              <Link to='/reservations'><h2 className='profile-link'>Make a new reservation</h2></Link>
-            </div>
-              <div className='components'>
-                <MyReservations/>
-                <UserUpdate/>
-                <CreateReview/>
-              </div>
-          </div>
-          ) : (
-            <div>
-              <h1>Oh no!</h1>
-              <p>It looks like you are not logged in.</p>
-              <Link to='/login' >Log in here</Link>
-            </div>
-          )} 
-      
-    </main>
+ <div>
+  <Header/>
+  <Profile/>
+  </div>
   )
 }
 
