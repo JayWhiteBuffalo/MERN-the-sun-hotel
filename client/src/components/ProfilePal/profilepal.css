@@ -16,7 +16,6 @@
     margin: 0rem 0rem 1rem 0rem;
     width: 15vw;
     background-color: var(--secondary);
-    border-radius: 20%;
     padding: 15px;
 }
 .palBox button:hover{

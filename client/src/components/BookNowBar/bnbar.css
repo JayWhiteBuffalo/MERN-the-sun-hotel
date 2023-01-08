@@ -25,7 +25,7 @@
 }
 .bnbarArrival div {
     color: var(--darker);
-    background-color: var(--primary);
+    background-color: var(--secondary);
     font-size: xx-large;
     height: 3rem;
     position: relative;
@@ -33,7 +33,7 @@
 .bnbarArrival input{
     width: 70%;
     font-weight: 500;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     border: none;
     font-size: medium;
     text-align: center;
@@ -52,18 +52,18 @@
     height: 3rem;
     font-weight: 500;
     text-align: center;
-    background-color:var(--primary);
+    background-color:var(--secondary);
 }
 .bnbBar button{
     width: 10vw;
     margin: 0rem 0rem 0rem 1rem;
     font-weight: 500;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     height: 3.1rem;
 }
 
 .bnbBar button:hover{
-    background-color: var(--tertiary);
+    background-color: var(--primary);
 }
 
 .calendarCont{

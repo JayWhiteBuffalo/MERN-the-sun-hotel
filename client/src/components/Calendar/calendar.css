@@ -18,6 +18,7 @@ cont{
   width: 60%;
   position: relative;
   top: 8vh;
+  /* background-color: var(--dark); */
 }
 
 .mobileBooking{
@@ -34,7 +35,8 @@ group{
   width: 57vw;
   height: fit-content;
   min-height: 60vh;
-  background-color: var(--darker);
+  background-color: var(--secondary);
+  margin-bottom: 10vh;
 }
 
 .resTop{
@@ -55,6 +57,7 @@ group{
   opacity: .8;
   text-align: center;
   justify-content: center;
+  background-color: var(--secondary);
 }
 .priceBox div h3{
   font-weight: 900;

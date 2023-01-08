@@ -57,15 +57,6 @@ const ReactCalendar = () => {
 
     const [calendarActive, setCalendarActive] = useState(false);
 
-// const toggleCalendar = () =>{
-//     if (!calendarActive){
-//         setCalendarActive(true)
-//     } else {
-//     setCalendarActive(false)
-// }
-// console.log(calendarActive)}
-
-
     //sets state from string from drop down selection
     const roomChange = () => 
       {

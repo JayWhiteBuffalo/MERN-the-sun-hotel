@@ -51,12 +51,11 @@ body{
     /* display: flex; */
     background-color: var(--darker);
     opacity: .8;
-    padding: 5%;
-    width: 30vw;
-    min-width: 270px;
-    max-width:fit-content;
+    padding: 50px;
+    max-width: 400px;
+    min-width: 300px;
     border-radius: 10%;
-    margin: 5% 33% 0 0%;
+    margin: 5% 40% 0 0%;
     justify-content: flex-start;
     height: fit-content;
     flex: 1;

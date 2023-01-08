@@ -53,10 +53,10 @@ const RoomCards = (props) => {
                         <ul>
                             <li>Room Description:</li>
                             <li>Bed Type: {openRooms.bed}</li>
-                            <li>Room View: {openRooms.view}</li>
+                            <li>View: {openRooms.view}</li>
                             <li>Room Price:{openRooms.price}.</li>
                         </ul>
-                        <Button id="roomBtn" size="lg" variant="outline-warning">Select Room</Button>{' '}
+                        <Button id="roomBtn" size="lg">Select Room</Button>{' '}
                         </div>
                         </div>
                     </Row>

@@ -22,9 +22,17 @@
     position: relative;
     justify-content: center;
     width: 10vw;
-    max-height: 75px;
-    margin: 1rem;
+    max-height: 50px;
+    margin: 1.5rem 1rem 0 0;
+    background-color: transparent;
+    color: black;
+    box-shadow: 2px 2px 2px gray;
 }
+
+#roomBtn:hover{
+    scale:calc(1.03) ;
+}
+
 .card h5{
     position: relative;
     font-weight: 700;
