@@ -18,9 +18,6 @@ const Cuisine = () => {
         <h1 className="text-center text-success " >LOVE</h1>
         <h1 className="text-center text-success " >MEET</h1>
         <h2 className="text-center" >BOOK</h2>
-        <div className="diningBook">
-        <BookNowBox/>
-        </div>
             </div>
         <div className="dine-right">
         <main className="dine-head1">
@@ -38,11 +35,26 @@ const Cuisine = () => {
                 <img className="img1" src="https://images.pexels.com/photos/3201920/pexels-photo-3201920.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Card image cap"/>
             </div>
         </main>
-        <main className="dine-head2">
+        <div className="dining-txt">
+                <h3>Our restaurant is open till mindnight!</h3>
+                <br/>
+                <h4>A good place for business dinner</h4>
+                <br/>
+                <h5>A bright and open atmosphere</h5>
+                <br/>
+                <h3>A perfect place to grab a drink</h3>
+                <br/>
+                <h2> Our hospitable staff have got you covered!</h2>
+            </div>
+        <main className="dine-head4">
             <div>
                 <img className="img1" src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Card image cap"/>
             </div>
+            <div className="diningBook">
+        <BookNowBox/>
+        </div>
         </main>
+        
         </div>
         </div>
         {/* <div className="container">

@@ -4,7 +4,7 @@ import "./profilepal.css";
 const ProfilePal = (props) => {
 
     const log = () => {
-        console.log(props.menu)
+        props.setMenu(null)
       }
 
     return(

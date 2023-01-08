@@ -1,17 +1,16 @@
 body{
   width: 100vw;
-  height: 100vh;
-  position: absolute;
+  height: fit-content;
 }
 /*My Profile*/
 .my-profile{
     background-color: var(--primaryLight);
     margin-top: -3vh;
     width: 100vw;
-    height: fit-content;
     min-height: 100vh;
     padding: 0px;
     display: flexbox;
+    overflow: auto;
 }
   
   .welcome {
@@ -30,35 +29,48 @@ body{
   .pal-wrap{
     display:flex;
     position: relative;
-    margin: 2rem 0rem 2rem 0rem;
+    margin: 10vh 0rem 2rem 0rem;
     width: fit-content;
     flex: 1;
     left: 78%;
-  
   }
 
   .pal-cont{
-    position: relative;
-    background-color: var(--secondary);
+    position: relative;;
     width: 20vw;
     height: fit-content;
-    border-radius: 15%;
-    background-color: var(--dark);
+    /* background-color: var(--dark); */
     opacity: .9;
+    border: 3px solid black;
+    box-shadow: 3px 3px 3px gray;
+    overflow:hidden;
+  }
+
+  .profileCont{
+    /* border: 2px solid black; */
+    display: flex;
+    position: relative;
+    top: 10vh;
+    right: 30vw;
+    width: 50vw;
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
   }
   .profileBook{
-    /* position: relative; */
-    /* display: flex; */
-    background-color: var(--darker);
-    opacity: .8;
+    background-color: transparent;
     padding: 50px;
-    max-width: 400px;
-    min-width: 300px;
-    border-radius: 10%;
-    margin: 5% 40% 0 0%;
-    justify-content: flex-start;
     height: fit-content;
     flex: 1;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px gray;
+    border-radius: 10%;
+    min-width: 20rem;
+    max-width: 30vw;
+    min-height: 400px;
+    max-height: fit-content;
     
   }
   
@@ -73,17 +85,6 @@ body{
     border-radius: 10px;
     text-decoration: none;
   }
-  
-  /* .components {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100vw;
-    height: 100vh;
-    border: 3px solid black;
-    padding: 0;
-  } */
   
   .components button {
     color: var(--darker);
@@ -126,22 +127,34 @@ body{
     background-color: rgba(255, 255, 255, 0.899);
   }
 
+  .resWrap{
+    height: 100vh;
+    margin-top: 18vh;
+  }
+
   .reservation-wrap {
     position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    border: 1px solid black;
-    margin: 8vh 0vh 0vh 0vh;
-    width: 50vw;
     flex: 1;
-    right: 30%;
+    flex-wrap: wrap;
+    background-color: transparent;
+    color: var(--darker);
+    font-weight:700;
+    letter-spacing: 1.5px;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px gray;
     border-radius: 10%;
-
+    min-width: 50vw;
+    max-width: 50vw;
+    margin: 8vh 0 0 ;
   }
   .reservation-wrap h2{
-    margin-top: 2rem;
+    margin-top: 3rem;
+    opacity: 2;
+    font-weight:900;
   }
 
   
@@ -155,9 +168,18 @@ body{
     padding: .5rem;
     margin: 2rem;
   }
+
+  .reservation-component h3{
+    font-weight: 650;
+  }
+  .reservation-component h4{
+    font-weight: 650;
+  }
+  .reservation-component h5{
+    font-weight: 650;
+  }
   
   .user-reservations {
-    border: 1px solid var(--secondary);
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.471);
@@ -165,54 +187,109 @@ body{
     margin: .5rem;
   }
   .reservation-component button {
-    background: white;
-    font-weight: 800;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px gray;
+    background: transparent;
+    border: 2px solid var(--darker);
+    color: var(--darker);
+    margin-top: 1vh;
+    box-shadow: 2px 2px 2px var(--darker);
   }
 
   .reservation-component button:hover {
-    background-color: var(--secondary);
-    filter: drop-shadow(0 0 1.5rem var(--primaryLight));
-    opacity: .8;
     scale:calc(1.05);
   }
 
+  .delete-btn{
+    margin-top: 3vh;
+    background-color: transparent;
+    height: 5%;
+    width: 10vw;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 3px;
+    box-shadow: 2px 2px 2px var(--darker);
+  }
+
+  .delete-btn:hover{
+    background-color: transparent;
+    /* color: var(--grass); */
+    scale:calc(1.5);
+  }
+
   .profile-email{
-    border: 1px solid black;
-    width: 35vw;
-    height: 40vh;
+    min-width: 20rem;
+    max-width: 30vw;
+    min-height: 400px;
+    max-height: 40vh;
     display: flex;
     position: relative;
-    /* top: 15vh;
-    right: 60vh; */
-    margin: 10vh 35vw 0vh 0vh;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px gray;
     border-radius: 10%;
   }
   .profile-email h2{
     position: relative;
-    top: -15%;
+    margin-bottom: 5vh;
+    font-weight: 900;
+    letter-spacing: 2.5px;
   }
 
+  .profile-email button{
+    margin-top: 3vh;
+    background-color: transparent;
+    height: 5vh;
+    width: 10vw;
+    padding: 3px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: 2px 2px 2px var(--dark);
+  }
+  .profile-email button:hover{
+    /* background-color: var(--darker);
+    color: var(--grass); */
+    scale:calc(1.1);
+  }
+
+
   .review-component{
-    border: 1px solid black;
     display: flex;
     align-content: center;
     justify-content: center;
     flex: 1;
     flex-direction: column;
     min-width: 20rem;
-    max-width: 40vw;
+    max-width: 30vw;
     min-height: 400px;
     max-height: 40vh;
-    margin: 8vh 40vw 0 0 ;
     text-align: center;
     border-radius: 10%;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px gray;
+  }
+  .review-component h2{
+  font-weight:900;
   }
   .reviewText textarea{
     width: 80%;
   }
+  .submit-btn{
+    margin-top: 3vh;
+    background-color: transparent;
+    height: 5vh;
+    width: 10vw;
+    padding: 3px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: 2px 2px 2px var(--dark);
+  }
+  .submit-btn:hover{
+    /* color: var(--grass); */
+    background-color: transparent;
+    scale:calc(1.2);
+
+  }
+

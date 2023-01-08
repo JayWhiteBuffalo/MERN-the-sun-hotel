@@ -208,10 +208,12 @@ const ReactCalendar = () => {
           roomNumber={roomNumber}
           roomType={roomType}
           isValid={isValid}
-          noVancancy={noVancancy}/>
+          noVancancy={noVancancy}
+          handleSubmit={handleSubmit}/>
         </group>  
       </section>
       <section>
+        <div className="priceCont">
         <div className="priceBox">
           <div>
             <h3>Your Stay</h3>
@@ -226,6 +228,7 @@ const ReactCalendar = () => {
               Total: $$$
             </div>
           </div>
+        </div>
         </div>
       </section>
       </main>

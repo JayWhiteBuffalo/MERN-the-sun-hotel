@@ -5,9 +5,8 @@ import UserUpdate from '../UserUpdate';
 import MyReservations from '../MyReservations';
 import CreateReview from '../CreateReview';
 import Header from '../Header/Header';
-import BookNowBox from '../BookNowBox';
+import BnbProfile from '../BnBProfile/bnbProfile';
 import ProfilePal from '../ProfilePal';
-import "../BookNowBox/bnb.css"
 import "./profile.css"
 
 import { useQuery } from '@apollo/client';
@@ -43,13 +42,16 @@ function Profile (props) {
                     />
                 </div>
                 </div>
+                <div className='profileCont'>
                 {menu === 'bookNowBox'? (
                 <div className="profileBook">
-                    <BookNowBox/>
+                    <BnbProfile/>
                 </div>
                 ) : null}
                 {menu === 'reservation' ? (
+                    <div className='resWrap'>
                     <MyReservations/>
+                    </div>
                 ) : null}
                 {menu === 'email' ? (
                     <UserUpdate/>
@@ -57,6 +59,7 @@ function Profile (props) {
                 {menu === 'review' ? (
                     <CreateReview/>
                 ) : null}
+                </div>
               </div>
           </div>
           ) : (

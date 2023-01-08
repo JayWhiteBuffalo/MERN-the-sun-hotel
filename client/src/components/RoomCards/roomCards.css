@@ -1,15 +1,22 @@
 .card{
     max-height: 250px;
-    padding: .5rem;
+    /* padding: .5rem; */
     margin: 1.5rem;
     min-width: 53vw;
+    background-color: var(--primary);
+    border: 3px solid black;
 }
 .card img{
+    display: flex;
+    position: relative;
     width: 20vw;
+    height: 100.5%;
+    margin-left: -1.58vw;
 }
 
 .card-body{
     max-width: 32vw;
+    background-color: var(--primary);
 }
 .card-main{
     display: flex;
@@ -25,7 +32,7 @@
     max-height: 50px;
     margin: 1.5rem 1rem 0 0;
     background-color: transparent;
-    color: black;
+    color: var(--darker);
     box-shadow: 2px 2px 2px gray;
 }
 

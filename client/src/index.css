@@ -244,22 +244,28 @@ span{
 
 .review-container {
   position: relative;
-  border: 2px solid black;
+  border: 2px solid var(--grass);
   min-width: 25vw;
   max-width: 25vw;
   max-height: 30vh;
   font-size: 12px;
   margin: 1rem;
   padding: 1rem;
-  overflow: auto;
-  overflow-wrap: break-word;
-  background-color: var(--dark);
+  overflow: hidden;
+  background-color: transparent;
   color: var(--grass);
   font-weight: 700;
   letter-spacing: 1px;
   scrollbar-width: thin;
-  
+  border-radius: 10%;
+  box-shadow: 2px 2px 2px var(--grass);
 }
+.review-container:hover {
+  scale: calc(1.1);
+  background-color: var(--dark);
+  overflow: auto;
+}
+
 
 @media screen and (max-width: 950px){
   .discoverWrap{

@@ -2,9 +2,8 @@ import React from "react";
 import Calendar from "react-calendar";
 import { useNavigate } from "react-router-dom";
 import { FaCalendar } from "react-icons/fa";
-import "./bnbar.css"
 import 'react-calendar/dist/Calendar.css';
-
+import "./bnbar.css"
 const BookNowBar = (props) => {
 
 const toggleCalendar = () =>{

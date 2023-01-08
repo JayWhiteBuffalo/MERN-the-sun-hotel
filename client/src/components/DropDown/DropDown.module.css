@@ -4,27 +4,48 @@ nav a:hover {
     filter: brightness(200%)  drop-shadow(16px 16px 20px blue);;
 }
 
+hgroup{
+	border: 2px solid black;
+	display: flex;
+	width: min-content;
+	margin-left: 15px;
+	margin-top: 15px;
+	opacity: .8;
+	background-color: var(--darker);
+	width: min-content;
+	height: 8vh;
+	align-items: center;
+}
+
 hgroup a{
+	display: flex;
     position: relative;
-    margin:15px;
+    margin:5px 0px 0px 5px;
     text-align: center;
     width: 5vw;
 	font-size: 1.5rem;
 	padding: .8vw;
 	color: var(--primary);
+	height: min-content;
+}
+
+thead{
+	height: 10vh;
 }
 
 thead button{
+	display: flex;
 	position: relative;
 	background-color: transparent;
 	border: none;
-	color: var(--primary);
+	color: var(--tertiary);
 	font-size: 1.8rem;
-	margin-left: 2vw;
-	margin-top: 1vh;
+	margin-left: 1.7vw;
+	top: 4.2vh;
 }
 
 hgroup button{
+	display: flex;
 	position: relative;
 	background-color: transparent;
 	border: none;
@@ -32,17 +53,19 @@ hgroup button{
 	font-size: 1.8rem;
 	left: 2%;
 	margin-right: 2vw;
-	margin-top: 1vh;
+	margin-top: .5vh;
 }
 
 hgroup a:hover{
-	color: var(--tertiary)
+	color: var(--primary);
+	scale: calc(1.5)
 }
 
 hgroup button:hover{
-	color: var(--tertiary);
+	color: var(--primary);
+	scale: calc(1.2)
 }
 
 thead button:hover{
-	color: var(--tertiary);
+	scale: calc(1.2)
 }

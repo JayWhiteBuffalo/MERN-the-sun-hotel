@@ -45,6 +45,7 @@
   height: 15vh;
   width: 50vw;
   top: 3%;
+  right: 10%;
   justify-content: flex-end;
   /* background-color: var(--secondary); */
 }
@@ -54,7 +55,8 @@
     margin: 1rem;
     height: 15vh;
     width: 50vw;
-    margin-top: 35vh;
+    margin-top: -1vh;
+    left: -5%;
     justify-content: flex-start;
     /* background-color: var(--secondary); */
   }
@@ -64,8 +66,19 @@
     margin: 1rem;
     height: 20vh;
     width: 55vw;
-    margin-top: 35vh;
+    margin-top: 15vh;
     justify-content: flex-end;
+    right: -7%;
+    /* background-color: var(--secondary); */
+  }
+  .dine-head4{
+    /* display: flex; */
+    position: relative;
+    margin: 1rem;
+    height: 15vh;
+    width: 50vw;
+    /* bottom: -25%; */
+    /* justify-content: flex-start; */
     /* background-color: var(--secondary); */
   }
 
@@ -73,6 +86,7 @@
 .dine-head h4{
     display: flex;
     flex: 1;
+    
 }
 .img1{
     height: 33vh;
@@ -85,12 +99,13 @@
 .img3{
     height: 20vh;
     width: 20vw;
+
 }
 
 .img1{
     --g: 4px;     /* the gap */
     --b: 5px;    /* border thickness*/
-    --c: var(--secondary); /* the color */
+    --c: var(--grass); /* the color */
     
     
     padding: calc(var(--g) + var(--b));
@@ -108,7 +123,7 @@
   .img1:hover {
     --_p: 75%;
     filter: grayscale(0%);
-    --c: var(--primary);
+    --c: var(--secondary);
   }
   .dine-left-text h2{
     display: flex;
@@ -133,6 +148,19 @@
     width: 30vw;
     min-width: 270px;
     border-radius: 10%;
-    margin-left: 1rem;
-    margin-top: 5rem;
+    right: -15%;
+    bottom: 10%
+  }
+  
+  .dining-txt{
+    position: relative;
+    /* border: 3px solid var(--secondary); */
+    width: 30vw;
+    height: 40vh;
+    right: -5%;
+    top: -10%;
+    color: var(--secondary);
+    text-align: center;
+    margin-top: 15vh;
+    font-size: 2%;
   }

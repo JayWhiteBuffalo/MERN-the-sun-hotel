@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { FaCalendar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import moment from "moment";
-import "./bnb.css"
+import "./bnbProfile.css"
 
 import 'react-calendar/dist/Calendar.css';
 
-const BookNowBox = (props) => {
+const BnbProfile = () => {
 
 const [calendarActive, setCalendarActive] = useState(false);
 
@@ -44,8 +44,8 @@ const handleClick = () => {
 return (
 
     <div className="bnbCont">
-        <div className="bnBox">
-            <div className="bnArrival">
+        <div className="bnpBox">
+            <div className="bnpArrival">
                 <div>
                 <FaCalendar/>
                 <input  type="text" placeholder="Arrive" defaultValue={arriveDate} onFocus={toggleCalendar}></input>
@@ -63,7 +63,7 @@ return (
                     selectRange={true}
                     returnValue="range"/>
                     </div>) : ( <div>
-            <div className="bnRooms">
+            <div className="bnpRooms">
             <select name="rooms" id="rooms">
                 <option value="undefined">Select Room Type</option>
                 <option value="Deluxe Double">Deluxe Double Room</option>
@@ -72,9 +72,8 @@ return (
               </select>
             </div>
             <Link to="/reservations">
-            <button type="submit" onClick={(e)=>props.handleSubmit(e)}> Book Now</button>
+            <button> Book Now</button>
             </Link>
-             {/* Pass data up the chain => pass data back down to reservation page */}
            </div> ) }
         </div>
     </div>
@@ -83,4 +82,4 @@ return (
 
 }
 
-export default BookNowBox;
+export default BnbProfile;
