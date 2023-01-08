@@ -28,7 +28,7 @@ body{
   }
   .pal-wrap{
     display:flex;
-    position: relative;
+    position: absolute;
     margin: 10vh 0rem 2rem 0rem;
     width: fit-content;
     flex: 1;
@@ -57,7 +57,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px;
-
+    right: 5%;
   }
   .profileBook{
     background-color: transparent;
@@ -71,7 +71,7 @@ body{
     max-width: 30vw;
     min-height: 400px;
     max-height: fit-content;
-    
+    margin-left: 5vw;
   }
   
   .my-profile span {
@@ -130,6 +130,7 @@ body{
   .resWrap{
     height: 100vh;
     margin-top: 18vh;
+    margin-left: 5vw;
   }
 
   .reservation-wrap {
@@ -147,9 +148,9 @@ body{
     border: 2px solid black;
     box-shadow: 3px 3px 3px gray;
     border-radius: 10%;
-    min-width: 50vw;
-    max-width: 50vw;
-    margin: 8vh 0 0 ;
+    min-width: 48vw;
+    max-width: 48vw;
+    margin: 8vh 0 0 0;
   }
   .reservation-wrap h2{
     margin-top: 3rem;
@@ -230,6 +231,7 @@ body{
     border: 2px solid black;
     box-shadow: 3px 3px 3px gray;
     border-radius: 10%;
+    margin-left: 5vw;
   }
   .profile-email h2{
     position: relative;
@@ -269,6 +271,7 @@ body{
     border-radius: 10%;
     border: 2px solid black;
     box-shadow: 3px 3px 3px gray;
+    margin-left: 5vw;
   }
   .review-component h2{
   font-weight:900;
@@ -290,6 +293,12 @@ body{
     /* color: var(--grass); */
     background-color: transparent;
     scale:calc(1.2);
-
   }
 
+  .trees{
+    max-width: fit-content;
+    max-height: fit-content;
+    position: absolute;
+    left: -16%;
+    bottom: 0%;
+  }

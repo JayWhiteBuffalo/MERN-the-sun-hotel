@@ -8,6 +8,7 @@ import Header from '../Header/Header';
 import BnbProfile from '../BnBProfile/bnbProfile';
 import ProfilePal from '../ProfilePal';
 import "./profile.css"
+import trees from "../../assets/images/palmTree.png"
 
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../../utils/queries';
@@ -31,6 +32,9 @@ function Profile (props) {
           <div>
             <div className='welcome'>
               <h1>Welcome back <span>{me.username}</span> !</h1>
+            </div>
+            <div className='trees'>
+            <img src={trees} alt="trees"></img>
             </div>
               <div className='flex-wrap'>
                 <div className='pal-wrap'>

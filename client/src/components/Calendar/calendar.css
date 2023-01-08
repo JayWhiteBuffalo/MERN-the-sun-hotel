@@ -65,6 +65,7 @@ group{
   opacity: .8;
   text-align: center;
   justify-content: center;
+  background-color: var(--primaryLight);
 }
 .priceBox div h3{
   font-weight: 900;
