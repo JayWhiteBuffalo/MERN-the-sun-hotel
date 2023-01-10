@@ -216,6 +216,11 @@ span{
   background-color: white;
 }
 
+/*Rooms*/
+.room-card{
+  max-height: 300px;
+}
+
 /*Reviews*/
 .review-page h1{
   font-size: 5rem;

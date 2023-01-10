@@ -12,12 +12,12 @@ const Room = () => {
         <div className="top">
             <Header/>
         <h1 className="text-center text-success my-5">Come stay with us in our comfortable rooms!</h1>
-        <h4 className="text-center my-5">Designed with you in mind, with comfortability and accessability at the forefront </h4>
-        <h5 className="text-center my-5">Together with 24/7 front-desk service, The Sun Hotel is the place for you!</h5>
+        <h4 className="text-center text-success my-5">Designed with you in mind, with comfortability and accessability at the forefront </h4>
+        <h5 className="text-center text-success my-5">Together with 24/7 front-desk service, The Sun Hotel is the place for you!</h5>
         <div className="container">
             <div className="row">
                 <div className="col-md-4">
-                    <div className="card">
+                    <div className="">
                         <img className="card-img-top" src={DeluxeDouble} alt="Deluxe Double hotel room" />
                         <div className="card-body">
                         <h5 className="card-title">Deluxe Double Room</h5>
@@ -31,7 +31,7 @@ const Room = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="card">
+                    <div className="">
                         <img className="card-img-top" src={SuperiorDouble} alt="Superior Double hotel room" />
                         <div className="card-body">
                         <h5 className="card-title">Superior Double Room</h5>
@@ -45,7 +45,7 @@ const Room = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="card">
+                    <div className="">
                         <img className="card-img-top" src={SuperiorSuite} alt="Superior Suite hotel room" />
                         <div className="card-body">
                         <h5 className="card-title">Superior Suite Room</h5>
