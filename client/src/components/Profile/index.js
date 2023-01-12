@@ -22,7 +22,7 @@ function Profile (props) {
     me = data.me;
   }
 
-  const [menu, setMenu] = useState(undefined)
+  const [menu, setMenu] = useState('reservation')
 
  
 

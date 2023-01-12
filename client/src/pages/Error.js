@@ -5,7 +5,12 @@ const Error = () => {
   return (
     <div>
       <Header/>
-      Page can't be found.
+      <main>
+        <section>
+          <br/>
+      <h1>Opps! Somthing went wrong.</h1>
+      </section>
+      </main>
     </div>
   );
 };

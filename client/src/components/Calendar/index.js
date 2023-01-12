@@ -139,6 +139,7 @@ const ReactCalendar = () => {
       setDisabledDates('');
       checkAvailable();
       setRoomNumber(roomCount)
+      console.log(totalPrice())
     }
 
     //add Reservation
@@ -162,6 +163,7 @@ const ReactCalendar = () => {
         console.error(err)
       } if (!err){
         //Redirect to Profile Page
+        
         window.location.reload(navigate("/myprofile"));
       }
   
@@ -186,6 +188,13 @@ const ReactCalendar = () => {
         setCalendarActive(false)
     };
 
+    //Functions for RoomCards
+    //Get information for selected Room
+    const openRooms = rooms.find(room => room.roomType === roomType)
+
+    //Calculate Price
+    let totalPrice = ()=> { if(openRooms !== undefined){return (openRooms.price) * reqReservation.length}};
+    
     return (
       <cont>
       <main>
@@ -205,6 +214,8 @@ const ReactCalendar = () => {
         <h1>Select a Room</h1>
         <group>
           <RoomCards
+          openRooms={openRooms}
+          rooms={rooms}
           roomNumber={roomNumber}
           roomType={roomType}
           isValid={isValid}
@@ -225,8 +236,9 @@ const ReactCalendar = () => {
               <p>{roomType}</p>
             </div>
             <div>
-              Total: $$$
+              Total:${totalPrice()}.00
             </div>
+            <button>Checkout</button>
           </div>
         </div>
         </div>

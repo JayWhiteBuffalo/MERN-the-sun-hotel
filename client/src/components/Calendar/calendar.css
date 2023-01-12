@@ -53,12 +53,10 @@ group{
 }
 
 .priceBox{
-  display: flex;
-  flex: 1;
   border: 3px solid black;
-  position: absolute;
-  top: 10%;
-  right: -55%;
+  position: fixed;
+  top: 30vh;
+  right: 5vw;
   width: 30vw;
   max-height: 50vh;
   height: 50vh;

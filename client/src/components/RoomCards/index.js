@@ -38,23 +38,23 @@ const RoomCards = (props) => {
     let cards = [];
     const renderCards = () => {
         if (props.isValid===true){
-    const openRooms = roomDummyData.find(rooms => rooms.name === props.roomType)
+    // const openRooms = props.rooms.find(room => room.roomType === props.roomType)
     for (let i = 0; i < props.roomNumber[0]; i++)
         {
         cards.push( <Stack key={i} gap={1} className="col-md-5">
         <Container>
-            <Row key={openRooms.id}>
+            <Row key={props.openRooms.id}>
                 <Row md="auto">
                     <Row className="card">
-                        <img className="card-img-top" src={openRooms.img} alt="Superior Double hotel room" />
+                        <img className="card-img-top" src={props.openRooms.img} alt="Superior Double hotel room" />
                         <div className="card-body">
-                        <h5 className="card-title">{openRooms.name} Room</h5>
+                        <h5 className="card-title">{props.openRooms.roomType} Room</h5>
                         <div className="card-main">
                         <ul>
                             <li>Room Description:</li>
-                            <li>Bed Type: {openRooms.bed}</li>
-                            <li>View: {openRooms.view}</li>
-                            <li>Room Price:{openRooms.price}.</li>
+                            <li>Bed Type: {props.openRooms.bed}</li>
+                            <li>View: {props.openRooms.view}</li>
+                            <li>Room Price:{props.openRooms.price}.</li>
                         </ul>
                         <Button id="roomBtn" size="lg" type="submit" onClick={(e)=>props.handleSubmit(e)}>Select</Button>{' '}
                         </div>
