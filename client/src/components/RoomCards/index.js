@@ -56,7 +56,7 @@ const RoomCards = (props) => {
                             <li>View: {props.openRooms.view}</li>
                             <li>Room Price:{props.openRooms.price}.</li>
                         </ul>
-                        <Button id="roomBtn" size="lg" type="submit" onClick={(e)=>props.handleSubmit(e)}>Select</Button>{' '}
+                        <Button id="roomBtn" size="lg" type="submit" onClick={()=>props.handleSelect()}>Select</Button>{' '}
                         </div>
                         </div>
                     </Row>

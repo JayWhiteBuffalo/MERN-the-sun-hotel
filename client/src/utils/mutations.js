@@ -76,15 +76,19 @@ export const UPDATE_EMAIL = gql`
 `;
 
 export const ADD_ROOM = gql`
-    mutation addRoom($roomType: String!, $price: Int!, $roomCount: Int!) {
+    mutation addRoom($roomType: String!, $price: Int!, $roomCount: Int!, $view: String, $bed: String) {
         addRoom (
             roomType: $roomType, 
             price: $price,
-            roomCount: $roomCount
+            roomCount: $roomCount,
+            view: $view,
+            bed: $bed
             ){
             roomType
             price
             roomCount
+            view
+            bed
             }
         } 
 `;

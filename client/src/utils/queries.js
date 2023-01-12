@@ -83,6 +83,8 @@ export const QUERY_ROOMS= gql`
         roomType
         roomCount
         price
+        view
+        bed
       }
     }
 `

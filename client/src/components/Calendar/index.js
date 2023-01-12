@@ -53,7 +53,8 @@ const ReactCalendar = () => {
     //Tracks if the Requested Reservation can be booked
     const [isValid, setIsValid] = useState(false);
     const [disabledDates, setDisabledDates] = useState([]);
-    const [roomNumber, setRoomNumber]=useState("")
+    const [roomNumber, setRoomNumber]=useState("");
+    const [stageRes, setStageRes]=useState(undefined);
 
     const [calendarActive, setCalendarActive] = useState(false);
 
@@ -68,6 +69,7 @@ const ReactCalendar = () => {
     
     //Checks to see if room is open
     const checkAvailable = () => {
+      setStageRes(undefined)
       //Array of all reservations that have selected roomType
       let matchingRes = [];
       //Array of all dates that a roomType is reserved for
@@ -173,7 +175,8 @@ const ReactCalendar = () => {
     const getDates = (date) => {
         setDisabledDates([])
         setDate(date);
-        setIsValid(false)
+        setIsValid(false);
+        setStageRes(undefined);
         let arrivalDate = (moment(date[0]).format("MM/DD/YYYY"));
         let departureDate = (moment(date[1]).format("MM/DD/YYYY"));
         let bookedDates = eachDayOfInterval({
@@ -194,6 +197,16 @@ const ReactCalendar = () => {
 
     //Calculate Price
     let totalPrice = ()=> { if(openRooms !== undefined){return (openRooms.price) * reqReservation.length}};
+
+    const handleSelect = () => {
+      let stageReservation = {
+        checkIn : reqReservation[0],
+        checkout: reqReservation[reqReservation.length-1],
+        roomType: roomType,
+        price: totalPrice()
+      }
+      setStageRes(stageReservation)
+    }
     
     return (
       <cont>
@@ -214,6 +227,7 @@ const ReactCalendar = () => {
         <h1>Select a Room</h1>
         <group>
           <RoomCards
+          handleSelect={handleSelect}
           openRooms={openRooms}
           rooms={rooms}
           roomNumber={roomNumber}
@@ -228,17 +242,20 @@ const ReactCalendar = () => {
         <div className="priceBox">
           <div>
             <h3>Your Stay</h3>
+            {stageRes !== undefined && isValid === true ?(
             <div>
-              <p>Check-In : {reqReservation[0]}</p>
-              <p>Checkout-Out : {reqReservation[reqReservation.length-1]}</p>
+            <div>
+              <p>Check-In : {stageRes.checkIn}</p>
+              <p>Checkout-Out : {stageRes.checkout}</p>
             </div>
             <div>
-              <p>{roomType}</p>
+              <p>{stageRes.roomType}</p>
             </div>
             <div>
-              Total:${totalPrice()}.00
+              Total:${stageRes.price}.00
             </div>
             <button>Checkout</button>
+          </div>) : (null)}
           </div>
         </div>
         </div>

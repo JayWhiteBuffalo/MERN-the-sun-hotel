@@ -31,8 +31,10 @@ const typeDefs = gql`
   type Room {
     id: ID
     roomType: String!
-    price: Int
-    roomCount: Int
+    price: Int!
+    roomCount: Int!
+    view: String
+    bed: String
   }
  
   type Auth {

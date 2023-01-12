@@ -11,6 +11,12 @@ const roomSchema = new Schema(
     price: {
       type: Number
     },
+    view: {
+      type: String
+    },
+    bed: {
+      type: String
+    },
     roomCount: {
       type: Number
     }
