@@ -241,7 +241,7 @@ const ReactCalendar = () => {
             <div>
               Total:${stageRes.price}.00
             </div>
-            <button>Checkout</button>
+            <button type="submit" onClick={(e)=> handleSubmit(e)}>Checkout</button>
           </div>) : (null)}
           </div>
         </div>
