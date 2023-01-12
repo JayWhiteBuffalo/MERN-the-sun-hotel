@@ -27,10 +27,10 @@ function Profile (props) {
  
 
   return (
-    <div className='my-profile'>
+    <div className=''>
         {me ? (
-          <div>
-            <div className='welcome'>
+          <div className='my-profile'>
+            <div>
               <h1>Welcome back <span>{me.username}</span> !</h1>
             </div>
             <div className='trees'>
@@ -67,11 +67,9 @@ function Profile (props) {
               </div>
           </div>
           ) : (
-            <div>
-              <h1>Oh no!</h1>
-              <p>It looks like you are not logged in.</p>
-              <Link to='/login' >Log in here</Link>
-            </div>
+            <div className ="loginRedirect">
+                <Link to="/login">You need to log in first</Link>
+              </div>
           )} 
       
     </div>

@@ -67,6 +67,16 @@ span{
 
 /* Reservation home page section */
 
+.loginRedirect{
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--primaryLight);
+}
+
 .resCont{
   background-image: url(../src/assets/images/Black-Elegant-Background.jpg);
   background-size: cover;
@@ -220,12 +230,25 @@ span{
 .card img{
   max-height: 300px;
 }
+.roomPage{
+  background-color: var(--primaryLight);
+  height: fit-content;
+}
+.roomPage h1{
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  top: 5rem;
+  margin-bottom: 3em;
+}
 
 /*Reviews*/
 .review-page h1{
   font-size: 5rem;
   margin-top: 3rem;
-  color: var(--grass);
+  color: var(--darker);
 }
 .review-page{
   width: 100vw;
@@ -233,7 +256,7 @@ span{
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: var(--darker);
+  background-color: var(--primaryLight);
 }
 .review-flex{
   display: flex;
@@ -249,7 +272,7 @@ span{
 
 .review-container {
   position: relative;
-  border: 2px solid var(--grass);
+  border: 2px solid var(--darker);
   min-width: 25vw;
   max-width: 25vw;
   max-height: 30vh;
@@ -258,16 +281,15 @@ span{
   padding: 1rem;
   overflow: hidden;
   background-color: transparent;
-  color: var(--grass);
+  color: var(--darker);
   font-weight: 700;
   letter-spacing: 1px;
   scrollbar-width: thin;
   border-radius: 10%;
-  box-shadow: 2px 2px 2px var(--grass);
+  box-shadow: 2px 2px 2px gray;
 }
 .review-container:hover {
   scale: calc(1.1);
-  background-color: var(--dark);
   overflow: auto;
 }
 

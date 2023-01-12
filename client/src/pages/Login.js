@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
+import Header from '../components/Header/Header';
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
+  const navigate = useNavigate();
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(e);
     try {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
+      window.location.reload(navigate("/myprofile"));
     } catch (e) {
       console.log(e);
     }
@@ -30,7 +33,9 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div>
+      <Header/>
+    <div className="loginRedirect">
       <Link to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
@@ -64,6 +69,7 @@ function Login(props) {
           <button type="submit">Submit</button>
         </div>
       </form>
+    </div>
     </div>
   );
 }

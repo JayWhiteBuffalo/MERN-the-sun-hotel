@@ -15,14 +15,15 @@ hgroup{
 	width: min-content;
 	height: 8vh;
 	align-items: center;
+	/* border-radius: 5%; */
 }
 
 hgroup a{
 	display: flex;
     position: relative;
-    margin:5px 0px 0px 5px;
+    margin:5px 0px 0px 1px;
     text-align: center;
-    width: 5vw;
+    width: 4vw;
 	font-size: 1.5rem;
 	padding: .8vw;
 	color: var(--primary);

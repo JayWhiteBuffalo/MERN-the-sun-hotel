@@ -1,7 +1,7 @@
 import React, {useRef, useState} from "react";
 import "./DropDown.module.css"
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaHome} from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaUserAlt} from "react-icons/fa";
 import { BiDrink, } from "react-icons/bi";
 import { MdOutlineBedroomParent, MdOutlineRateReview } from "react-icons/md";
 import { BsCalendar2Date } from "react-icons/bs";
@@ -36,6 +36,7 @@ const DropDown = () => {
 				<Link classname="icon" to="/rooms"><MdOutlineBedroomParent/></Link>
 				<Link classname="icon" to="/reservations"><BsCalendar2Date/></Link>
 				<Link classname="icon" to="/review"><MdOutlineRateReview/></Link>
+				<Link className="icon" to="/myprofile"><FaUserAlt/></Link>
 			</hgroup> 
 			</div>
 			)}

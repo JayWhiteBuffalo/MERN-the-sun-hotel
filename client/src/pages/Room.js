@@ -9,11 +9,11 @@ import Header from "../components/Header/Header";
 const Room = () => {
 
     return (
-        <div className="top">
+        <div className="roomPage">
             <Header/>
-        <h1 className="text-center text-success my-5">Come stay with us in our comfortable rooms!</h1>
-        <h4 className="text-center text-success my-5">Designed with you in mind, with comfortability and accessability at the forefront </h4>
-        <h5 className="text-center text-success my-5">Together with 24/7 front-desk service, The Sun Hotel is the place for you!</h5>
+        <h1 className="">Come stay with us in our comfortable rooms!</h1>
+        <h4 className="text-center my-5">Designed with you in mind, with comfortability and accessability at the forefront </h4>
+        <h5 className="text-center my-5">Together with 24/7 front-desk service, The Sun Hotel is the place for you!</h5>
         <div className="container">
             <div className="row">
                 <div className="col-md-4">

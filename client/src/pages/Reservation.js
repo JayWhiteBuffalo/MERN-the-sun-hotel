@@ -19,7 +19,7 @@ const Reservation = () => {
               </div>
               
              ) : 
-              <div className ="text-center loginPlsBtn">
+              <div className ="text-center loginRedirect">
                 <Link to="/login">You need to log in first</Link>
               </div> }
         </div>

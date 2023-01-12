@@ -5,12 +5,11 @@ body{
 /*My Profile*/
 .my-profile{
     background-color: var(--primaryLight);
-    margin-top: -3vh;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 0px;
+    width: 100vw;;
     display: flexbox;
     overflow: auto;
+    min-height: 85vh;
+    height: 100vh;
 }
   
   .welcome {
