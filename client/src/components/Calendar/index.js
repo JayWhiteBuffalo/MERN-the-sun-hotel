@@ -9,6 +9,9 @@ import { useNavigate } from "react-router-dom";
 import BookNowBar from "../BookNowBar";
 import "./calendar.css"
 import RoomCards from "../RoomCards";
+import DeluxeDouble from "../../assets/images/DeluxeDouble.jpg";
+import SuperiorDouble from "../../assets/images/SuperiorDouble.jpg";
+import SuperiorSuite from "../../assets/images/SuperiorSuite.jpg";
 
 
 
@@ -43,6 +46,7 @@ const ReactCalendar = () => {
     const [roomNumber, setRoomNumber]=useState(""); // How many rooms the selected roomType has
     const [stageRes, setStageRes]=useState(undefined); //Stage all reservation information in JSON obj before submit to Stripe
     const [calendarActive, setCalendarActive] = useState(false); // Calendar Toggle
+    const [roomImg, setRoomImg] = useState("");
 
 
     //**Setting Reservation Information from Booking Box/Bar**//
@@ -73,6 +77,8 @@ const ReactCalendar = () => {
       setIsValid(false)
       let roomInput = document.querySelector('#rooms').value
       setRoomType(roomInput)
+      let roomImg = roomType.replace(' ', "");
+      setRoomImg(roomImg)
       }
   //**End of Setting information for Reservation**//
 
@@ -87,7 +93,7 @@ const ReactCalendar = () => {
       checkIn : reqReservation[0],
       checkout: reqReservation[reqReservation.length-1],
       roomType: roomType,
-      price: totalPrice()
+      price: totalPrice(),
       }
     setStageRes(stageReservation)
     }
@@ -209,7 +215,8 @@ const ReactCalendar = () => {
         setDate={setDate}
         date={date}
         reqReservation={reqReservation}
-        roomType={roomType}/>
+        roomType={roomType}
+        />
         </div>
         <h1>Select a Room</h1>
         <group>
@@ -221,7 +228,9 @@ const ReactCalendar = () => {
           roomType={roomType}
           isValid={isValid}
           noVancancy={noVancancy}
-          handleSubmit={handleSubmit}/>
+          handleSubmit={handleSubmit}
+          roomImg={roomImg}
+          />
         </group>  
       </section>
       <section>

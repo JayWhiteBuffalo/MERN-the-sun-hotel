@@ -8,32 +8,15 @@ import {Row, Container, Col, Stack, Button} from 'react-bootstrap'
 
 
 const RoomCards = (props) => {
-    const roomDummyData = [
-        {
-            id: 0,
-            name: "Deluxe Double",
-            bed: "Queen Bed",
-            view: "Standard",
-            price: "$112.00",
-            img: DeluxeDouble     
-        },
-        {
-            id: 1,
-            name: "Superior Double",
-            bed: "King Bed",
-            view: "Balcony",
-            price: "$180.00", 
-            img: SuperiorDouble    
-        },
-        {
-            id: 2,
-            name: "Superior Suite",
-            bed: "2 Queen Beds",
-            view: "Overview of the City",
-            price: "$230.00",
-            img: SuperiorSuite     
-        }
-    ] 
+
+    const getRoomImg = () => {
+    if(props.roomImg === "SuperiorSuite"){
+        return SuperiorSuite
+    } if(props.roomImg === "DeluxeDouble") {
+        return DeluxeDouble
+    } else {
+        return SuperiorDouble
+    }}
 
     let cards = [];
     const renderCards = () => {
@@ -46,7 +29,7 @@ const RoomCards = (props) => {
             <Row key={props.openRooms.id}>
                 <Row md="auto">
                     <Row className="card">
-                        <img className="card-img-top" src={props.openRooms.img} alt="Superior Double hotel room" />
+                        <img className="card-img-top" src={getRoomImg()} alt="Superior Double hotel room" />
                         <div className="card-body">
                         <h5 className="card-title">{props.openRooms.roomType} Room</h5>
                         <div className="card-main">
