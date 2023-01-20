@@ -17,10 +17,17 @@
 .card-body{
     max-width: 32vw;
     background-color: var(--primary);
+    min-height: fit-content;
 }
 .card-main{
     display: flex;
     justify-content: space-between;
+    font-weight: 600;
+}
+
+
+.card-main ul li{
+    margin: .5rem;
 }
 
 
@@ -34,6 +41,7 @@
     background-color: transparent;
     color: var(--darker);
     box-shadow: 2px 2px 2px gray;
+    background-color: var(--primaryLight);
 }
 
 #roomBtn:hover{

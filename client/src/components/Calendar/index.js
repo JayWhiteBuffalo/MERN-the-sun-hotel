@@ -128,6 +128,7 @@ const ReactCalendar = () => {
         if(roomType === reservationArr[0][i].room){
           matchingRes.push(reservationArr[0][i])
         }}
+        console.log(matchingRes)
 
         //if No matches are found then the room is available.
        if (matchingRes.length < roomCount[0] || matchingRes.length === 0){
@@ -157,12 +158,13 @@ const ReactCalendar = () => {
           let sortedDateRoom = dateRoomsArr.map((a)=>{return {"date": a[0], "count":a[1]}}).sort(function(a, b){return a.count - b.count});
           let x = roomCount - sortedDateRoom[i].count;
           //If there are more reservations for that day than there are rooms. The reservation cannot be made
-          if( sortedDateRoom[i].count >= roomCount){
+          if( sortedDateRoom[i].count >= roomCount[0]){
             console.log("There are",x,roomType,'rooms Left on ', sortedDateRoom[i].date)
             noVancancy.push(sortedDateRoom[i].date)
             setIsValid(false)
-          } if ( sortedDateRoom[i].count > 0){
+          } else if ( sortedDateRoom[i].count <= 4){
             console.log("There are",x,roomType,"rooms left on", sortedDateRoom[i].date )
+            setIsValid(true)
           }
           else if (sortedDateRoom.length <= i+1 && noVancancy < 1){
             console.log("Room is available")
@@ -202,8 +204,9 @@ const ReactCalendar = () => {
     //*End Add Reservation**//
     
     return (
+      
       <cont>
-      <main>
+      <main className="reservationPage">
       <section>
         <div className="resTop">
         <BookNowBar 
@@ -220,6 +223,15 @@ const ReactCalendar = () => {
         </div>
         <h1>Select a Room</h1>
         <group>
+          {isValid === false && disabledDates.length > 0 ? (
+          <div className="noVacancy">
+            <h3> We apologize for the inconvenience</h3>
+            <h5>{roomType} rooms unavailable on:</h5>
+            <ul>
+              {disabledDates.join(' ✦ ')}
+            </ul>
+          </div>
+          ) : (
           <RoomCards
           handleSelect={handleSelect}
           openRooms={openRooms}
@@ -230,7 +242,7 @@ const ReactCalendar = () => {
           noVancancy={noVancancy}
           handleSubmit={handleSubmit}
           roomImg={roomImg}
-          />
+          />)}
         </group>  
       </section>
       <section>
@@ -258,6 +270,7 @@ const ReactCalendar = () => {
       </section>
       </main>
       </cont>
+
       );
     }
   

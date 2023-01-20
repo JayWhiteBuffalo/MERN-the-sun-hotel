@@ -51,7 +51,7 @@ return (
               </select>
             </div>
            </div> 
-           <button onClick={handleCheckSubmit}> Book Now</button>
+           <button onClick={handleCheckSubmit}> Check Rooms</button>
         </div>
     </div>
     {props.calendarActive === true ? (<div className="calendarCont">

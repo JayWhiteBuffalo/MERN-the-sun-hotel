@@ -1,4 +1,5 @@
 
+
 :root {
   --primary: rgb(255, 217, 0);
   --primaryLight: rgb(255, 239, 148);
@@ -252,6 +253,7 @@ span{
 }
 .review-page{
   width: 100vw;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;

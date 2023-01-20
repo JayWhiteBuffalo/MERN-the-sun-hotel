@@ -4,7 +4,8 @@ cont{
   position: relative;
   display: flex;
   flex: 1;
-  background-color: var(--primaryLight);
+  height: fit-content;
+  
 }
 .bookingMain{
     max-width: 100vw;
@@ -16,7 +17,8 @@ cont{
 .calendar{
   width: 60%;
   position: relative;
-  top: 8vh;
+  margin-top: 3%;
+  /* top: 8vh; */
 }
 
 .mobileBooking{
@@ -33,22 +35,43 @@ group{
   width: 57vw;
   height: fit-content;
   min-height: 60vh;
-  background-color: transparent;
+  background-color: var(--primaryLight);
   margin-bottom: 10vh;
+  
   
 }
 
 .resTop{
   display: flex;
   flex-direction: row;
+  
+}
+
+.noVacancy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 5em;
+  justify-content: center;
+}
+.noVacancy h3{
+  margin-bottom: 2em;
+  font-size: 2em;
+}
+.noVacancy h5{
+  margin-bottom: 2em;
+}
+.noVacancy ul{
+  font-weight: 450;
+  font-size: 1.3em;
 }
 
 .priceCont{
   display: flex;
-  margin: -5vh 0 0 1vw;
-  height: 100%;
+  margin: 0 0 0 1vw;
+  min-height: 100%;
   width: 40vw;
-  background-color: var(--primary);
   /* border-left: 5px solid black; */
 }
 
@@ -64,7 +87,13 @@ group{
   text-align: center;
   justify-content: center;
   background-color: var(--primaryLight);
+  font-weight: 800;
 }
+
+.priceBox button{
+  margin: 2rem;
+}
+
 .priceBox div h3{
   font-weight: 900;
   margin: 3rem;

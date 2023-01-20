@@ -37,7 +37,7 @@ const RoomCards = (props) => {
                             <li>Room Description:</li>
                             <li>Bed Type: {props.openRooms.bed}</li>
                             <li>View: {props.openRooms.view}</li>
-                            <li>Room Price:{props.openRooms.price}.</li>
+                            <li>Room Price: ${props.openRooms.price} per night</li>
                         </ul>
                         <Button id="roomBtn" size="lg" type="submit" onClick={()=>props.handleSelect()}>Select</Button>{' '}
                         </div>
